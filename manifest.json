@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Hocus Focus",
+    "version": "1.0.0",
+    "description": "Help yourself focus by blocking time-wasting websites!",
+    "options_page": "options/options.html",
+    "icons": {
+        "16": "img/icon-16.png",
+        "32": "img/icon-32.png",
+        "48": "img/icon-48.png",
+        "128": "img/icon-128.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "img/icon-16.png",
+            "32": "img/icon-32.png",
+            "48": "img/icon-48.png",
+            "128": "img/icon-128.png"
+        },
+        "default_title": "Hocus Focus",
+        "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["scripts/content.js"]
+        }
+    ],
+    "permissions": [
+        "storage"
+    ]
+}
