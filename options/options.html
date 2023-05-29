@@ -5,15 +5,22 @@
 </head>
 
 <body>
-  <input type="text" placeholder="domain to block" id="newDomainInput" />
+  <h1>Hocus Focus Settings</h1>
+
+  <input type="text" placeholder="www.domain.com" id="newDomainInput" />
   <button type="submit" id="addDomain">+</button>
-  
-  <div>
-    List of blocked domains:
-    <ul id="dottedList"></ul>
-  </div>
-  
+
+  <table id="blockedDomainsTable">
+    <thead>
+      <tr>
+        <th>Blocked Domains</th>
+      </tr>
+    <tbody id="blockedDomainsList"></tbody>
+  </table>
+
   <button type="submit" id="clearList">Clear list</button>
-  
+
   <script src="options.js"></script>
 </body>
+
+</html>
