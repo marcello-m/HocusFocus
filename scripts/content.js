@@ -1,5 +1,3 @@
-let blockedDomains = [];
-
 // Retrieve blocked domains from storage
 chrome.storage.sync.get(['blockedDomains', 'isEnabled'], function (result) {
   const blockedDomains = result.blockedDomains;
