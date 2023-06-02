@@ -3,7 +3,7 @@
     "name": "Hocus Focus",
     "version": "1.0.0",
     "description": "Help yourself focus by blocking time-wasting websites!",
-    "options_page": "options/options.html",
+    "options_page": "html/options.html",
     "icons": {
         "16": "img/icon-16.png",
         "32": "img/icon-32.png",
@@ -18,7 +18,7 @@
             "128": "img/icon-128.png"
         },
         "default_title": "Hocus Focus",
-        "default_popup": "popup/popup.html"
+        "default_popup": "html/popup.html"
     },
     "content_scripts": [
         {
