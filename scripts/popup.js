@@ -1,18 +1,24 @@
 var dottedListElement = document.getElementById("dottedList"); // Dotted list element
 const toggleButton = document.getElementById("toggleButton"); // Toggle switch element 
 
-dottedListElement.innerHTML = "";
-
 chrome.storage.sync.get(['blockedDomains'], function (result) {
-    blockedDomains = result.blockedDomains;
+    blockedDomains = result.blockedDomains || [];
+    
+    blockedDomainsList.innerHTML = '';
 
-    if (blockedDomains && blockedDomains.length > 0) {
-        blockedDomains.forEach(domain => {
-            const listItem = document.createElement('li');
-            listItem.textContent = domain;
-            dottedListElement.appendChild(listItem);
-        });
-    }
+    blockedDomains.forEach(function (domain) {
+        const row = document.createElement('tr');
+
+        // Domain column
+        const domainCell = document.createElement('td');
+        const checkboxCell = document.createElement('td');
+        domainCell.textContent = domain;
+        checkboxCell.innerHTML = '<td><input type="checkbox" checked class="pauseDomain"/></td>'
+        row.appendChild(domainCell);
+        row.appendChild(checkboxCell);
+
+        blockedDomainsList.appendChild(row);
+    });
 });
 
 chrome.storage.sync.get(['isEnabled'], function (result) {

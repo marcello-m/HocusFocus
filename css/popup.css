@@ -5,51 +5,92 @@ body {
   padding: 20px;
   margin: 0;
   width: 300px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #bf7aff;
+  border-radius: 10px;
 }
 
 .wrapper {
   text-align: center;
 }
 
-h1 {
-  color: #8a2be2;
+
+#titleImage {
+  width: 280px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;  
+}
+
+#settingsIcon {
+  width: 30px;
+  margin: 0 auto;
+  display: block;
+  transition-duration: 0.5s;
+}
+
+#settingsIcon:hover {
+  rotate: 45deg;
+  transition-duration: 0.5s;
 }
 
 button {
+  width: 85px;
   padding: 10px 20px;
-  background-color: #8a2be2;
+  background-color: #bf7aff;
   border: none;
-  color: #ffffff;
+  color: #ac2fff;
+  font-weight: 700;
   font-size: 14px;
   cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.5s;
 }
 
 button:hover {
-  background-color: #6e1fbb;
+  background-color: #aa4fff;
+  color: antiquewhite;
+  width: 100px;
 }
 
-a {
+button:after {
+  background-color: #2f2f2f;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-color: #aa4fff;
+  border-width: 2px;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #3f2242;
+  padding: 10px;
+  text-align: center;
+  font-size: large;
+}
+
+thead {
+  border-color: #aa4fff;
+  border-width: 2px;
+  border-style: solid;
+}
+
+td {
+  background-color: #3f2242;
+  padding: 15px;
+  text-align: center;
+  font-size: large;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
   display: block;
-  margin-top: 10px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 5px;
-}
-
-#dottedList li:before {
-  content: "-";
-  margin-right: 5px;
-  color: #8a2be2;
+  accent-color: #bf7aff;
 }
