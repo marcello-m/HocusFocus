@@ -1,60 +1,124 @@
 body {
     font-family: Arial, sans-serif;
     color: #ffffff;
-    background-color: #2f2f2f;
+    background-color: #10002B;
     padding: 20px;
 }
 
-h1 {
-    color: #8a2be2;
-    text-align: center;
+img {
+    width: 280px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
+}
+
+#pageContainer {
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+.inputWrapper {
+    width: 500px;
+    height: 50px;
+    background-color: #F4EFFA;
+    border-radius: 25px;
 }
 
 input[type="text"] {
-    width: 200px;
-    padding: 8px;
-    font-size: 14px;
-}
-
-button {
-    padding: 8px 12px;
-    background-color: #8a2be2;
+    width: 400px;
+    font-size: 20px;
+    margin-left: 20px;
+    background-color: #F4EFFA;
     border: none;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: #6e1fbb;
+input[type="text"]:focus {
+    outline: none;
+}
+
+#addDomain {
+    width: 60px;
+    height: 42px;
+    border-radius: 20px;
+    background-color: #5A189A;
+    border: none;
+    color: #F4EFFA;
+    font-size: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 4px;
+    transition-duration: 0.3s;
+}
+
+#addDomain:hover {
+    background-color: #9D4EDD;
+    transition-duration: 0.3s;
+}
+
+#addDomain:active {
+    background-color: #5A189A;
 }
 
 #blockedDomainsTable {
-    width: 50%;
+    width: 500px;
     margin-top: 20px;
+    background-color: #240046;
+    border-color: #9D4EDD;
+    border-width: 2px;
+    border-style: solid;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 #blockedDomainsTable th {
-    background-color: #8a2be2;
     padding: 10px;
-    text-align: left;
+    text-align: center;
+    font-size: large;
+    color: #E0AAFF;
+    background-color: #5A189A;
 }
 
 #blockedDomainsTable td {
     padding: 10px;
+    text-align: center;
+    font-size: 20px;
 }
 
-#clearList {
-    display: block;
-    margin-top: 20px;
-    background-color: #8a2be2;
-    padding: 10px;
+#removeButton {
+    background-color: #240046;
     border: none;
-    color: #ffffff;
-    font-size: 14px;
+}
+
+#deleteIcon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
     cursor: pointer;
 }
 
+#deleteIcon:hover {
+    transform: scale(1.1);
+}
+
+#clearList {
+    margin-left: 38%;
+    height: 50px;
+    border-radius: 25px;
+    padding-inline: 20px;
+    background-color: #5A189A;
+    border: none;
+    color: #F4EFFA;
+    font-size: 20px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
 #clearList:hover {
-    background-color: #6e1fbb;
+    background-color: #9D4EDD;
+    transition-duration: 0.3s;
+}
+
+#clearList:active {
+    background-color: #5A189A;
 }

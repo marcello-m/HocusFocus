@@ -9,21 +9,23 @@
 <body>
     <div class="wrapper">
         <img src="../resources/img/title.png" id="titleImage">
-        <button id="toggleButton"></button>
+        <div id="buttonWrapper">
+            <button id="toggleButton" class="on"></button>
+        </div>
     </div>
     <div>
         <table id="blockedDomainsTable">
             <thead>
                 <tr>
-                    <th>Blocked Domains</th>
-                    <th><a href="../html/options.html" target="_blank">
-                        <img src="../resources/img/settings.png" alt="Settings" id="settingsIcon"></imn>
-                    </a></th>
+                    <th>Blocked Websites</th>
+                    <th>
+                        <a href="../html/options.html" target="_blank">
+                            <img src="../resources/img/settingsWheel.png" alt="Settings" id="settingsIcon"></imn>
+                        </a>
+                    </th>
                 </tr>
             </thead>
             <tbody id="blockedDomainsList">
-                <td>www.facebook.com</td>
-                <td><input type="checkbox" checked class="pauseDomain"/></td>
             </tbody>
         </table>
     </div>

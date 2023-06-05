@@ -6,21 +6,29 @@
 </head>
 
 <body>
-  <h1>Hocus Focus Settings</h1>
+  <img src="../resources/img/settingsTitle.png">
+  <div id="pageContainer">
+    <div class="inputWrapper">
+      <input type="text" placeholder="www.domain.com" id="newDomainInput" />
+      <button type="submit" id="addDomain">+</button>
+    </div>
 
-  <input type="text" placeholder="www.domain.com" id="newDomainInput" />
-  <button type="submit" id="addDomain">+</button>
+    <table id="blockedDomainsTable">
+      <thead>
+        <tr>
+          <th colspan="2">Blocked Domains</th>
+        </tr>
+        <!-- trash icon by https://icons8.com -->
+      <tbody id="blockedDomainsList">
+        <tr>
+          <td>www.domain.com</td>
+          <td><img src="../resources/img/trash-icon.png" alt="Delete" id="deleteIcon"></td>
+        </tr>
+      </tbody>
+    </table>
 
-  <table id="blockedDomainsTable">
-    <thead>
-      <tr>
-        <th>Blocked Domains</th>
-      </tr>
-    <tbody id="blockedDomainsList"></tbody>
-  </table>
-
-  <button type="submit" id="clearList">Clear list</button>
-
+    <button type="submit" id="clearList">Clear list</button>
+  </div>
   <script src="../scripts/options.js"></script>
 </body>
 

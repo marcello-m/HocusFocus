@@ -1,6 +1,13 @@
 var dottedListElement = document.getElementById("dottedList"); // Dotted list element
 const toggleButton = document.getElementById("toggleButton"); // Toggle switch element 
 
+chrome.storage.sync.get(['isEnabled'], function (result) {
+    const isEnabled = result.isEnabled;
+
+    toggleButton.classList.toggle('off', !isEnabled);
+    toggleButton.classList.toggle('on', isEnabled);
+});
+
 chrome.storage.sync.get(['blockedDomains'], function (result) {
     blockedDomains = result.blockedDomains || [];
     
@@ -9,11 +16,10 @@ chrome.storage.sync.get(['blockedDomains'], function (result) {
     blockedDomains.forEach(function (domain) {
         const row = document.createElement('tr');
 
-        // Domain column
         const domainCell = document.createElement('td');
         const checkboxCell = document.createElement('td');
         domainCell.textContent = domain;
-        checkboxCell.innerHTML = '<td><input type="checkbox" checked class="pauseDomain"/></td>'
+        checkboxCell.innerHTML = '<input type="checkbox" checked class="pauseDomain"/>'
         row.appendChild(domainCell);
         row.appendChild(checkboxCell);
 
@@ -39,6 +45,9 @@ toggleButton.addEventListener('click', function () {
         // Update the text and appearance of the button based on the new state
         toggleButton.textContent = newState ? 'ON' : 'OFF';
         toggleButton.classList.toggle('active', newState);
+
+        toggleButton.classList.toggle('off', !newState);
+        toggleButton.classList.toggle('on', newState);
 
         chrome.storage.sync.set({ isEnabled: newState });
     });

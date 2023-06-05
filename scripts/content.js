@@ -22,9 +22,10 @@ chrome.storage.sync.get(['blockedDomains', 'isEnabled'], function (result) {
           .animation {
             width: 100px;
             height: 100px;
-            background-color: violet;
+            background-color: #C77DFF;
             border-radius: 50%;
-            animation: pulse 1s infinite alternate;
+            animation: pulse 1.5s infinite alternate;
+            box-shadow: 0px 0px 40px #C77DFF;
           }
           
           @keyframes pulse {
@@ -42,12 +43,15 @@ chrome.storage.sync.get(['blockedDomains', 'isEnabled'], function (result) {
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #3f2242;
+            background-color: #10002B;
             color: #f1f1f1;
           }
 
           .quote-element {
             text-align: center;
+            padding-inline: 50px;
+            font: 400 28px/1.5 "Roboto", sans-serif;
+            font-weight: 600;
           }
 
           .author-element {
@@ -55,11 +59,19 @@ chrome.storage.sync.get(['blockedDomains', 'isEnabled'], function (result) {
             font-size: 16px;
             font-style: italic;
           }
+
+          .back-to-work-element {
+            text-align: center;
+            margin-top: 30px;
+            font: 800 30px "Roboto", sans-serif;
+            color: #C77DFF;
+          }
           `;
 
           const randomIndex = Math.floor(Math.random() * quotesData.length);
           const randomQuote = quotesData[randomIndex].quote;
           const randomAuthor = quotesData[randomIndex].author;
+          const backToWork = 'FOCUS!'
 
           const styleElement = document.createElement('style');
           styleElement.textContent = cssAnimation;
@@ -80,11 +92,16 @@ chrome.storage.sync.get(['blockedDomains', 'isEnabled'], function (result) {
           authorElement.textContent = `— ${randomAuthor}`;
           authorElement.classList.add('author-element');
 
+          const backToWorkElement = document.createElement('p');
+          backToWorkElement.textContent = backToWork;
+          backToWorkElement.classList.add('back-to-work-element');
+
           document.head.appendChild(styleElement);
           quoteContainer.appendChild(animationContainer);
           animationContainer.appendChild(animationElement);
           quoteContainer.appendChild(quoteElement);
           quoteContainer.appendChild(authorElement);
+          quoteContainer.appendChild(backToWorkElement);
 
           document.body.innerHTML = '';
           document.body.appendChild(quoteContainer);

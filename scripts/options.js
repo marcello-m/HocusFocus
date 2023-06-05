@@ -85,8 +85,11 @@ function updateBlockedDomainsTableList() {
 
             // Action column
             const actionCell = document.createElement('td');
+            actionCell.style.width = '50px';
             const removeButton = document.createElement('button');
-            removeButton.textContent = 'X';
+            removeButton.id = 'removeButton';
+            const trashImage = '<img src="../resources/img/trash-icon.png" alt="Delete" id="deleteIcon">';
+            removeButton.innerHTML = trashImage;
             removeButton.addEventListener('click', function () {
                     const updatedBlockedDomains = blockedDomains.filter(function (blockedDomain) {
                         return blockedDomain !== domain;
