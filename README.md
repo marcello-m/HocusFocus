@@ -1,6 +1,6 @@
 <!-- Replace [LOGO_URL] with the URL of your extension's logo -->
 
-# ***Hocus Focus*** (v 0.1)
+# ***Hocus Focus*** (v 1.0.0)
 
 ![Extension Logo](resources/img/icon-128.png)
 
