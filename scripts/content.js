@@ -48,6 +48,7 @@ chrome.storage.sync.get(['blockedDomains', 'isEnabled'], function (result) {
           }
 
           .quote-element {
+            color: #f1f1f1;
             text-align: center;
             padding-inline: 50px;
             font: 400 28px/1.5 "Roboto", sans-serif;
@@ -97,6 +98,8 @@ chrome.storage.sync.get(['blockedDomains', 'isEnabled'], function (result) {
           backToWorkElement.classList.add('back-to-work-element');
 
           document.head.appendChild(styleElement);
+          document.title = 'Focus!';
+
           quoteContainer.appendChild(animationContainer);
           animationContainer.appendChild(animationElement);
           quoteContainer.appendChild(quoteElement);
