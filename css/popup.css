@@ -100,6 +100,10 @@ td {
   padding: 15px;
   text-align: center;
   font-size: large;
+  max-width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 input[type="checkbox"] {

@@ -122,3 +122,10 @@ input[type="text"]:focus {
 #clearList:active {
     background-color: #5A189A;
 }
+
+td {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
