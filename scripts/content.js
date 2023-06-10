@@ -1,11 +1,15 @@
 // Retrieve blocked domains from storage
-chrome.storage.sync.get(['blockedDomains', 'isEnabled'], function (result) {
+chrome.storage.sync.get(['blockedDomains', 'isEnabled', 'excludedDomains'], function (result) {
   const blockedDomains = result.blockedDomains;
   const isEnabled = result.isEnabled;
+  const excludedDomains = result.excludedDomains;
 
   if (isEnabled) {
     // Check if the current tab's domain is in the blocked domains list
-    if (blockedDomains && (blockedDomains.includes(normalizeDomain(location.hostname)) || blockedDomains.includes(location.hostname))) {
+
+    if (blockedDomains && 
+      (blockedDomains.includes(normalizeDomain(location.hostname)) || blockedDomains.includes(location.hostname)) &&
+      (!excludedDomains.includes(normalizeDomain(location.hostname)) && !excludedDomains.includes(location.hostname))) {
 
       fetch(chrome.runtime.getURL('../resources/json/quotes.json'))
         .then(response => response.json())
