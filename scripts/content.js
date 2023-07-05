@@ -2,7 +2,7 @@
 chrome.storage.sync.get(['blockedDomains', 'isEnabled', 'excludedDomains'], function (result) {
   const blockedDomains = result.blockedDomains;
   const isEnabled = result.isEnabled;
-  const excludedDomains = result.excludedDomains;
+  const excludedDomains = result.excludedDomains || [];
 
   if (isEnabled) {
     // Check if the current tab's domain is in the blocked domains list
