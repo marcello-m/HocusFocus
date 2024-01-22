@@ -7,7 +7,8 @@
 > **Hocus Focus**\
 > *Help yourself focus by blocking time-wasting websites!*
 
-Hocus Focus is a Chrome extension that allows users to block distracting domains to improve productivity and focus.
+Hocus Focus is a Chrome extension that allows users to block distracting domains to improve productivity and focus.\
+### [Extension's page](https://chromewebstore.google.com/detail/jgjiegfafjdnfbhjhpbncdghejejcehg?hl=it) on the Chrome web store
 
 ---
 ## **Features**
@@ -30,7 +31,12 @@ Hocus Focus is a Chrome extension that allows users to block distracting domains
 4. Click on "Load unpacked" and select the folder containing the extension files.
 
 ---
+## **Installation** (Chrome web store)
+1. Go to the [extension's page](https://chromewebstore.google.com/detail/jgjiegfafjdnfbhjhpbncdghejejcehg?hl=it) on the Chrome web store.
+2. Click on the "Add to Chrome" button
+3. Confirm the installation of the extension in the pop up
+4. Enjoy!
 
-**Note**: This is the very first version of the extension. Please keep in mind that it may have limitations and is a work in progress.
+---
 
 ## **Suggestions and feedback are welcome!**
